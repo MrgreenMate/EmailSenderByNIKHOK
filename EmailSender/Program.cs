@@ -38,7 +38,7 @@ namespace EmailSender
             SmtpClient smtpClient = new SmtpClient("smtp.office365.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("zoldi.mate@uni-obuda.hu", "Zm020327"),
+                Credentials = new NetworkCredential("", ""),//(Email cím, jelszó)
                 EnableSsl = true,
             };
 
@@ -60,8 +60,8 @@ namespace EmailSender
 
                     MailMessage mail = new MailMessage
                     {
-                        From = new MailAddress("zoldi.mate@uni-obuda.hu"),
-                        Subject = "Teszt email",
+                        From = new MailAddress(""),//ide írd az emailedet
+                        Subject = "Teszt email",//ide írd a tárgyat
                         Body = emailBody,
                         IsBodyHtml = true, // Set to true if your email body is HTML
                     };
